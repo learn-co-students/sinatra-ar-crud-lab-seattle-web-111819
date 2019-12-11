@@ -45,6 +45,9 @@ class ApplicationController < Sinatra::Base
 
   delete "/articles/:id" do     # deletes article. button on SHOW.erb page. inside form.
     Article.destroy(params[:id])
+    #   or
+    # @article = Article.find_by_id(params[:id])
+    # @article.delete
     redirect to "/articles"
   end
 
