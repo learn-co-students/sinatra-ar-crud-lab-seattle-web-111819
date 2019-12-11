@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+    <form method="post" action="/articles/<%= @article.id %>">
+    <p>Old title: <%= "#{@article.title}" %></p>
+    <p>Enter the new title:</p>
+    <textarea name="title"></textarea>
+    <br>
+    <p>Old content: <%= "#{@article.content}" %></p>
+    <p>Enter the new content:</p>
+    <textarea name="content"></textarea>
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+    <button type="submit" value="submit">Submit</button>
+  </form>
+  
+  </body>
+</html>
