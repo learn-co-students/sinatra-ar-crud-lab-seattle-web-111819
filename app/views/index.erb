@@ -1,0 +1,14 @@
+<%# lists ALL articles %>
+<%# iterate over all articles to render to page %>
+
+<html> 
+    <head> 
+        <title> Articles </title>
+    </head>
+    <br>
+    <body>
+        <% @articles.each do |a| %>
+        <h2><%= a.title%><h2>
+        <% end %>
+    </body>
+</html>
