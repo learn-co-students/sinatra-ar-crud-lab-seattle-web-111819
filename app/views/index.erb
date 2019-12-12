@@ -1,0 +1,7 @@
+<h1>Magazine Articles</h1>
+
+<% @articles.each do |article|%>
+<a href="/articles/<%= "#{article.id}" %>"><%= article.title%></a></br>
+<% end %>
+
+<a href="/articles/new"><button type="button">Create A New Article!</button></a>
